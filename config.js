@@ -1,0 +1,11 @@
+const PERSISTENCE_TYPES = {
+    TYPE_MEMORY: 'MEMORY',
+    TYPE_FILE: 'FILE',
+    TYPE_MONGODB: 'MONGODB',
+};
+
+const config = {
+    PERSISTENCE_TYPE: PERSISTENCE_TYPES.TYPE_MONGODB
+};
+
+export {PERSISTENCE_TYPES, config as default};
