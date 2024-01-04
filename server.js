@@ -1,10 +1,13 @@
 import express from 'express';
+import cors from 'cors';
 import config from './config.js';
 import routerProducts from './routers/products.js';
 
 const PORT = config.PORT;
 
 const app = express();
+
+app.use(cors());
 
 // Middleware para que esté disponible la propiedad req.body en las rutas
 // > Para formato x-www-form-urlencoded:
