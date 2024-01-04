@@ -1,7 +1,8 @@
 import express from 'express';
+import config from './config.js';
 import routerProducts from './routers/products.js';
 
-const PORT = 8080;
+const PORT = config.PORT;
 
 const app = express();
 

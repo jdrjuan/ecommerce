@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
+import config from '../../config.js';
 
 let connected = false;
 
 const connectDB = async () => {
     try {
         // console.log('conectado?', connected);
-        await mongoose.connect('mongodb://127.0.0.1/ecommerce', {
+        await mongoose.connect(config.MONGODB_CONNECTION_STRING, {
             serverSelectionTimeoutMS: 4000
         });
         console.log('Conexión con MongoDB exitosa');
